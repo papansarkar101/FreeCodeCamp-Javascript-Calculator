@@ -1,38 +1,74 @@
-.App {
-  text-align: center;
+.container {
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.zero {
+    grid-area: zero;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.equal {
+    grid-area: equal;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.dis {
+    grid-area: dis;
+    background-color: #000;
+    color: white;
+    font-size: 24px;
+    text-align: right;
 }
 
-.App-link {
-  color: #61dafb;
+.dis input {
+    width: 97%;
+    padding: 5px;
+    color: white;
+    background-color: rgb(22, 22, 22);
+    text-align: right;
+    border: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "dis dis dis dis"
+    "AC C div times"
+    "seven eight nine minus"
+    "four five six plus"
+    "one two three equal"
+    "zero zero dot equal"
+    ;
+}
+
+.inputButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: grey;
+    color: white;
+    border: 1px solid rgb(0, 0, 0);
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.inputButton:hover {
+    border: 1px solid white;
+    color: #ccc;
+}
+
+.dark-gray {
+    background-color: #333;
+}
+
+.tomato {
+    background-color: tomato;
+}
+
+.equal {
+    background-color: #5599ff;
 }
